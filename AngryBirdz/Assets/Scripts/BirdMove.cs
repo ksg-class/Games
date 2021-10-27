@@ -6,6 +6,7 @@ public class BirdMove : MonoBehaviour
 {
     Vector2 posi;
     [SerializeField] float speed = 5.0f;
+    [SerializeField] float delay = 2f;
     Rigidbody2D birb;
 
     // Start is called before the first frame update
@@ -49,9 +50,15 @@ public class BirdMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        StartCoroutine(BirbDelay());
+        
+        
+    }
+    IEnumerator BirbDelay()
+    {
+        yield return new WaitForSeconds(delay);
         birb.position = posi;
         birb.isKinematic = true;
-        birb.velocity = new Vector2(0,0);
-        
+        birb.velocity = new Vector2(0, 0);
     }
 }
