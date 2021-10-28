@@ -38,7 +38,15 @@ public class BirdMove : MonoBehaviour
     void OnMouseDrag()
     {
         Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mouse.x, mouse.y, transform.position.z);
+        Vector2 mouseposi = mouse;
+
+        if (mouseposi.x > posi.x)
+        {
+            mouseposi.x = posi.x;
+        }
+        
+        
+        //transform.position = new Vector3(mouse.x, mouse.y, transform.position.z);
         
     }
     // Update is called once per frame

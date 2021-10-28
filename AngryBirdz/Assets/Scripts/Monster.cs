@@ -27,9 +27,11 @@ public class Monster : MonoBehaviour
     {
         BirdMove theBird = collision.gameObject.GetComponent<BirdMove>();
         if (theBird != null)
-        {
             return true;
-        }
+
+        if (collision.contacts[0].normal.y < -0.5)
+            return true;
+
         return false;
     }
     void Die()
