@@ -33,9 +33,9 @@ public class Movement : MonoBehaviour{
         /*if(Input.GetKey("space")){
         	rb.AddForce(0,20,0);
     	}*/
-        if (Input.GetKeyUp("space"))
+        if (Input.GetKey("c"))
         {
-            rb.AddForce(0, 20, 0);
+            rb.AddForce(0, -200, 0,ForceMode.VelocityChange);
         }
     	
     }
