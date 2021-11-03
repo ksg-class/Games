@@ -5,11 +5,12 @@ using UnityEngine.Audio;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioMixer mv, sv;
+    public AudioMixer mv, sv;
+   
     public void Volume (float vol)
     {
         Debug.Log(vol);
-        mv.SetFloat("MusicVol", vol);
+        mv.SetFloat("MusicVol", vol);       
         sv.SetFloat("SFXVolume", vol);
     }
 }
