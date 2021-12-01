@@ -7,7 +7,8 @@ using UnityEngine.Audio;
 public class Sound : MonoBehaviour
 {
     public Slider mval, sfxval;
-    public AudioSource music, sfx;
+    public AudioSource music;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,13 @@ public class Sound : MonoBehaviour
     void Update()
     {
         music.volume = mval.value;
-        sfx.volume = sfxval.value;
+        
     }
     public void SoundPrefs()
     {
         PlayerPrefs.SetFloat("MusicVolume", mval.value);
         PlayerPrefs.SetFloat("SFXVolume", sfxval.value);
     }
+    
     
 }

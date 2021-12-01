@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d3d44ec4f3785474bb0ad1b9acb532ab
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Flying-Slime-Reguler
+  fontNames:
+  - Flying-Slime-Reguler
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 795e199a44d53124283447bd2f8fec02, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

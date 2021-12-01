@@ -7,10 +7,20 @@ using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject MenuMusic;
+    public static bool MusicStart = false;
     public AudioSource menumusic;
 
     private void Start()
     {
+        if (MusicStart)
+        {
+            MenuMusic.SetActive(false);
+        }
+        else
+        {
+            MenuMusic.SetActive(true);
+        }
         menumusic.volume = PlayerPrefs.GetFloat("MusicVolume");
     }
     // Start is called before the first frame update

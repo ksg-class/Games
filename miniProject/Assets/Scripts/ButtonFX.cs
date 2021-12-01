@@ -5,14 +5,15 @@ using UnityEngine;
 public class ButtonFX : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioSource button;
+    public AudioClip hover, click;
 
-    // Update is called once per frame
-    void Update()
+    public void hoverFX()
     {
-        
+        button.PlayOneShot(hover);
+    }
+    public void clickFX()
+    {
+        button.PlayOneShot(click);
     }
 }
