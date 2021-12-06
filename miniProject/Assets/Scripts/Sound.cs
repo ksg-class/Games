@@ -17,7 +17,7 @@ public class Sound : MonoBehaviour
         mval.value = PlayerPrefs.GetFloat("MusicVolume");
         sfxval.value = PlayerPrefs.GetFloat("SFXVolume");
         AudioListener.volume = 1;
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
