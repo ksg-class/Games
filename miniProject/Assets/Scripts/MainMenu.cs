@@ -13,14 +13,14 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        if (MusicStart)
+        /*if (MusicStart)
         {
             MenuMusic.SetActive(false);
         }
         else
         {
             MenuMusic.SetActive(true);
-        }
+        }*/
         menumusic.volume = PlayerPrefs.GetFloat("MusicVolume");
     }
     // Start is called before the first frame update

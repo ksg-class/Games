@@ -8,6 +8,10 @@ public class ButtonFX : MonoBehaviour
     public AudioSource button;
     public AudioClip hover, click;
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     public void hoverFX()
     {
         button.PlayOneShot(hover);

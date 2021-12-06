@@ -6,14 +6,18 @@ using UnityEngine.Audio;
 
 public class Sound : MonoBehaviour
 {
+    public AllSounds s;
     public Slider mval, sfxval;
     public AudioSource music;
+    public AudioMixer mm,sm;
     
     // Start is called before the first frame update
     void Start()
     {
         mval.value = PlayerPrefs.GetFloat("MusicVolume");
         sfxval.value = PlayerPrefs.GetFloat("SFXVolume");
+        AudioListener.volume = 1;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
