@@ -16,8 +16,8 @@ public class Shattering : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Destroy(originalstuff);
-            Instantiate(shatterstuff, transform.position, transform.rotation);
-            
+            Instantiate(shatterstuff, originalstuff.transform.position, originalstuff.transform.rotation);
+            this.gameObject.SetActive(false);
         }
     }
 

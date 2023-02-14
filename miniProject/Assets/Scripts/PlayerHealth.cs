@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
@@ -8,11 +9,12 @@ public class PlayerHealth : MonoBehaviour
     int MaxHealth = 100, currenthealth;
     public int stayDamage = 1;
     private Health health;
+    public Slider healthbar;
     // Start is called before the first frame update
     void Start()
     {
         currenthealth = MaxHealth;
-        health.MaxHealth(MaxHealth);
+        MaxiHealth(MaxHealth);
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
     void TakeDamage(int damage)
     {
         currenthealth -= damage;
-        health.CurrentHealth(currenthealth);
+        CurrentHealth(currenthealth);
     }
     private void OnCollisionStay(Collision col)
     {
@@ -54,12 +56,21 @@ public class PlayerHealth : MonoBehaviour
         {
             currenthealth = 100;
         }
-        health.CurrentHealth(currenthealth);
+        CurrentHealth(currenthealth);
     }
 
     IEnumerator RestartScene()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void MaxiHealth(int health)
+    {
+        healthbar.maxValue = health;
+        healthbar.value = health;
+    }
+    public void CurrentHealth(int health)
+    {
+        healthbar.value = health;
     }
 }
